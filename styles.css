@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+
+span {
+  font-size: 2rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 37.5rem;
+}
+
+.flex-center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding-block: 3rem;
+}
+
+header h1 {
+  font-size: 3.2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 3rem;
+}
