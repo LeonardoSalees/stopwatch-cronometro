@@ -23,15 +23,18 @@ let resetButton = document.getElementById('reset-button')
 
 startButton.addEventListener('click', event => {
   startTimer()
+  startButton.disabled = true
 })
 
 stopButton.addEventListener('click', event => {
   stopTimer()
+  startButton.disabled = false
 })
 
 resetButton.addEventListener('click', event => {
   stopTimer()
   resetTimer()
+  startButton.disabled = false
 })
 
 // TIMER
