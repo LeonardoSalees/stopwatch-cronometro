@@ -1,3 +1,4 @@
+/* Geral */
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,7 @@ body {
 body {
   background: linear-gradient(to top, #8f70ff, #edb8fd);
 }
+/* patterns */
 button {
   background: none;
   border: none;
@@ -31,7 +33,10 @@ button {
 button:disabled {
   border: none;
 }
-
+.collumn > span:nth-child(1) {
+  margin-left: 1rem;
+  font-size: 2rem;
+}
 span {
   font-size: 4rem;
 }
@@ -48,6 +53,15 @@ span {
   align-items: center;
 }
 
+.collumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* page styles */
+
 header {
   display: flex;
   justify-content: center;
@@ -61,10 +75,10 @@ header h1 {
 main {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
 }
 
 .buttons {
+  padding-top: 4rem;
   display: flex;
   gap: 3rem;
 }

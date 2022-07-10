@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,21 +14,41 @@
         <h1>Cronômetro</h1>
       </header>
       <main>
-
+        <div class="flex-center-items"></div>
         <div class="flex-center-items">
-          <span id="hours">00</span>
-          <span class="">:</span>
-          <span id="minutes">00</span>
-          <span class="">:</span>
-          <span id="seconds">00</span>
-          <span class="">:</span>
-          <span id="milliseconds">00</span>
+          <div class="collumn">
+            <span>H</span>
+            <div>
+              <span id="hours">00</span>
+            </div>
+          </div>
+          <div class="collumn">
+            <span>M</span>
+            <div>
+              <span>:</span>
+              <span id="minutes">00</span>
+            </div>
+          </div>
+          <div class="collumn">
+            <span>S</span>
+            <div>
+              <span>:</span>
+              <span id="seconds">00</span>
+            </div>
+          </div>
+          <div class="collumn">
+            <span>Ms</span>
+            <div>
+              <span>:</span>
+              <span id="milliseconds">00</span>
+            </div>
+          </div>
         </div>
 
         <div class="buttons flex-center-items">
-          <button id="start-button">Start</button>
-          <button id="stop-button">Stop</button>
-          <button id="reset-button">Reset</button>
+          <button id="start-button">Iniciar</button>
+          <button id="stop-button">Parar</button>
+          <button id="reset-button">Reiniciar</button>
         </div>
       </main>
     </div>
