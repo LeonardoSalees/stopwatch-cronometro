@@ -27,20 +27,25 @@ let resetButton = document.getElementById('reset-button')
 startButton.addEventListener('click', event => {
   startTimer()
   startButton.disabled = true
+  stopButton.disabled = false
 })
 
 stopButton.addEventListener('click', event => {
   stopTimer()
   startButton.disabled = false
+  stopButton.disabled = true
 })
 
 resetButton.addEventListener('click', event => {
   stopTimer()
   resetTimer()
   startButton.disabled = false
+  stopButton.disabled = true
 })
 
 // TIMER
+
+stopButton.disabled = true
 
 function startTimer() {
   timerId = setInterval(countMilliseconds, 1000 / 60)
