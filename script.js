@@ -1,5 +1,6 @@
 // variaveis
 
+let milleseconds = 0
 let seconds = 0
 let minutes = 0
 let hours = 0
@@ -12,6 +13,8 @@ let spanSeconds = document.getElementById('seconds')
 let spanMinutes = document.getElementById('minutes')
 
 let spanHours = document.getElementById('hours')
+
+let spanMilleseconds = document.getElementById('milliseconds')
 
 let startButton = document.getElementById('start-button')
 
@@ -40,7 +43,7 @@ resetButton.addEventListener('click', event => {
 // TIMER
 
 function startTimer() {
-  timerId = setInterval(countSeconds, 1000)
+  timerId = setInterval(countMilliseconds, 1000 / 60)
 }
 
 function stopTimer() {
@@ -48,17 +51,29 @@ function stopTimer() {
 }
 
 function resetTimer() {
-  seconds = minutes = hours = 0
+  milleseconds = seconds = minutes = hours = 0
+  spanMilleseconds.innerHTML = '0' + milleseconds
   spanSeconds.innerHTML = '0' + seconds
   spanMinutes.innerHTML = '0' + minutes
   spanHours.innerHTML = '0' + hours
 }
+function countMilliseconds() {
+  milleseconds++
+  if (milleseconds < 10) {
+    milleseconds = '0' + milleseconds
+  }
 
+  if (milleseconds == 60) {
+    countSeconds()
+    milleseconds = '00'
+  }
+
+  spanMilleseconds.innerHTML = milleseconds
+}
 function countSeconds() {
   seconds++
   if (seconds < 10) {
     seconds = '0' + seconds
-    console.log(seconds)
   }
 
   if (seconds == 60) {
